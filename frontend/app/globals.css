@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: color 1.5s; /* Transition duration adjusted for color */
+}
+.navbar a:not(.active):hover {
+  background-color: #4CAF50;
+  color: black; /* Changes text color to black when hovered, but not active */
+}
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white; /* Keeps text white when active */
+}
+.logo {
+  display: block;
+  width: 60px;
+  height: 60px;
+  /*background: url('path_to_your_logo_image.jpg') no-repeat center center;*/
+  background-size: contain;
+}
+.search-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.navbar.search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.navbar.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.navbar.search-container button:hover {
+  background: #ccc;
+}
+
+
+/*-------------FORMS.HTML-----------------------------*/
+body .form-wrapper{
+  margin-top: 10px; /* Añade un espacio de 10px en la parte superior */
+  font-family: 'Courier New', monospace;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.form-wrapper form {
+  background: white;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.form-wrapper .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.form-wrapper .column {
+  flex: 1;
+  margin-right: 20px;
+}
+.form-wrapper .column:last-child {
+  margin-right: 0;
+}
+.form-wrapper label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-wrapper .required::after {
+  content: " *";
+  color: red;
+  display: inline;
+}
+.form-wrapper input, .form-wrapper textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-wrapper input.valid {
+  border: 1px solid green;
+}
+.form-wrapper input.invalid {
+  border: 1px solid red;
+}
+.form-wrapper input[type="button"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.form-wrapper h2, .form-wrapper h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Un verde más oscuro para el hover */
+}
